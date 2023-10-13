@@ -166,7 +166,7 @@ box-shadow: black 1px 2px 16px;
     </script>
 ```
 
-<a src="https://www.youtube.com/@hitechumair/videos">Subscribe on YouTube</a>
+<a src="https://www.youtube.com/c/hitechumair/videos">Subscribe on YouTube</a>
 
 
 
