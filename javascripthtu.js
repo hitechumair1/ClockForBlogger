@@ -46,9 +46,8 @@ var greet;
 else{
 greet = 'Something went wrong!';
 }
-
-    document.getElementById('lblGreetings').innerHTML =
-        '<b>' + greet + '</b>';
+var dis = '<b>' + greet + '</b>';
+    document.getElementById('lblGreetings').innerHTML = dis;
 
 setInterval(setDate, 1000);
 }
