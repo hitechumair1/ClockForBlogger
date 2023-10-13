@@ -7,7 +7,7 @@ var myDate = new Date();
 const hours = document.querySelector('.hours');
 const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
-function setDate() {
+
   //The "new Date" method helps to get the current time from the device
   const now = new Date();
   //Now the information of sec, min, hours has to be received from the device
@@ -33,6 +33,9 @@ function setDate() {
     minutes.innerHTML = mins;
   }
 
+  month.innerHTML = monthName[mm];
+  day.innerHTML = dd;
+  year.innerHTML = yyyy;
 
 
 var greet;
