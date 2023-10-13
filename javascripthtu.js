@@ -1,52 +1,47 @@
+      function currentTime() {
+        let date = new Date();
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let ss = date.getSeconds();
+        let session = "AM";
 
-var myDate = new Date();
-    var hrs = myDate.getHours();
+        var greet;
 
-const hours = document.querySelector('.hours');
-const minutes = document.querySelector('.minutes');
-const seconds = document.querySelector('.seconds');
-  const now = new Date();
-  const secs = now.getSeconds();
-  const mins = now.getMinutes();
-  const hrs = now.getHours();
-  if (hrs < 10) {
-    hours.innerHTML = '0' + hrs;
-  } else {
-    hours.innerHTML = hrs;
-  }
+        if (hh === 0) {
+          hh = 12;
+        } else if (hh > 12) {
+          hh = hh - 12;
+          session = "PM";
+        } else if (hh > 0 && hh <= 6) {
+          greet = "Early Morning";
+        } else if (hh > 6 && hh <= 12) {
+          greet = "Good Morning";
+        } else if (hh > 12 && hh <= 16) {
+          greet = "Good Afternon";
+        } else if (hh > 16 && hh <= 21) {
+          greet = "Good Evening";
+        } else if (hh > 21 && hh <= 24) {
+          greet = "Good Night";
+        } else {
+          console.log("error");
+        }
 
-  if (secs < 10) {
-    seconds.innerHTML = '0' + secs;
-  } else {
-    seconds.innerHTML = secs;
-  }
+        hh = hh < 10 ? "0" + hh : hh;
+        mm = mm < 10 ? "0" + mm : mm;
+        ss = ss < 10 ? "0" + ss : ss;
+        var hhh = hh;
+        var mmm = mm;
+        var sss = ss;
 
-  if (mins < 10) {
-    minutes.innerHTML = '0' + mins;
-  } else {
-    minutes.innerHTML = mins;
-  }
+        document.getElementById("hours").innerText = hhh;
+        document.getElementById("minutes").innerText = mmm;
+        document.getElementById("seconds").innerText = sss;
+        document.getElementById("ampm").innerText = session;
+        document.getElementById("greet").innerText = greet;
 
-  month.innerHTML = monthName[mm];
-  day.innerHTML = dd;
-  year.innerHTML = yyyy;
+        let t = setTimeout(function () {
+          currentTime();
+        }, 1000);
+      }
 
-
-var greet;
-    if (hrs >= 0 && <= 4){
-        greet = 'Its Early Morning';}
-   else if (hrs > 4  && <= 12){
-        greet = 'Good Morning';}
-    else if (hrs > 12 && hrs <= 15){
-        greet = 'Good Afternoon';}
-    else if (hrs > 15 && hrs <= 20){
-        greet = 'Good Evening';}
-    else if (hrs > 20 && hrs <= 24){
-        greet = 'Good Night';}
-else{
-greet = 'Something went wrong!';
-}
-var dis = '<b>' + greet + '</b>';
-    document.getElementById('lblGreetings').innerHTML = dis;
-
-setInterval(setDate, 1000);
+      currentTime();
