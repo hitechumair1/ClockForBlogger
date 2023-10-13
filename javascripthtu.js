@@ -1,20 +1,14 @@
+function setDate() {
 var myDate = new Date();
     var hrs = myDate.getHours();
 
-    
-//Need to determine the constant of some id functions.
-//No html function can be used directly in JavaScript
 const hours = document.querySelector('.hours');
 const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
-
-  //The "new Date" method helps to get the current time from the device
   const now = new Date();
-  //Now the information of sec, min, hours has to be received from the device
   const secs = now.getSeconds();
   const mins = now.getMinutes();
   const hrs = now.getHours();
-  //As a result, time will always be two characters long
   if (hrs < 10) {
     hours.innerHTML = '0' + hrs;
   } else {
@@ -57,3 +51,4 @@ greet = 'Something went wrong!';
         '<b>' + greet + '</b>';
 
 setInterval(setDate, 1000);
+}
