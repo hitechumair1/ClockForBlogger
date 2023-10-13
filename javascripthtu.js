@@ -35,7 +35,7 @@ function setDate() {
   month.innerHTML = monthName[mm];
   day.innerHTML = dd;
   year.innerHTML = yyyy;
-}
+
 
 var greet;
     if (hrs >= 0 && <= 4){
