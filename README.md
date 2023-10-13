@@ -165,8 +165,8 @@ box-shadow: black 1px 2px 16px;
       currentTime();
     </script>
 ```
-
-<a src="https://www.youtube.com/c/hitechumair/videos">Subscribe on YouTube</a>
+Subscribe on YouTube
+(https://www.youtube.com/c/hitechumair/videos)
 
 
 
