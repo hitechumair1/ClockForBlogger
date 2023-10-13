@@ -40,15 +40,17 @@ function setDate() {
 var greet;
     if (hrs >= 0 && <= 4){
         greet = 'Its Early Morning';}
-   else if (hrs < 12 && >= 4){
+   else if (hrs > 4  && <= 12){
         greet = 'Good Morning';}
-    else if (hrs >= 12 && hrs <= 15){
+    else if (hrs > 12 && hrs <= 15){
         greet = 'Good Afternoon';}
-    else if (hrs >= 18 && hrs <= 20){
+    else if (hrs > 15 && hrs <= 20){
         greet = 'Good Evening';}
-    else if (hrs >= 20 && hrs <= 24){
+    else if (hrs > 20 && hrs <= 24){
         greet = 'Good Night';}
-
+else{
+greet = 'Something went wrong!';
+}
 
     document.getElementById('lblGreetings').innerHTML =
         '<b>' + greet + '</b>';
