@@ -38,16 +38,16 @@ function setDate() {
 }
 
 var greet;
-    if (hrs >= 0 && <= 4)
-        greet = 'Its Early Morning';
-   else if (hrs < 12 && >= 4)
-        greet = 'Good Morning';
-    else if (hrs >= 12 && hrs <= 15)
-        greet = 'Good Afternoon';
-    else if (hrs >= 18 && hrs <= 20)
-        greet = 'Good Evening';
-    else if (hrs >= 20 && hrs <= 24)
-        greet = 'Good Night';
+    if (hrs >= 0 && <= 4){
+        greet = 'Its Early Morning';}
+   else if (hrs < 12 && >= 4){
+        greet = 'Good Morning';}
+    else if (hrs >= 12 && hrs <= 15){
+        greet = 'Good Afternoon';}
+    else if (hrs >= 18 && hrs <= 20){
+        greet = 'Good Evening';}
+    else if (hrs >= 20 && hrs <= 24){
+        greet = 'Good Night';}
 
 
     document.getElementById('lblGreetings').innerHTML =
